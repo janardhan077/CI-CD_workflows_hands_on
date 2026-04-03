@@ -1,0 +1,13 @@
+name: hello
+no: 
+  push:
+    btaches: [main]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+    - name: say hello to me 
+      run: echo "hello jana "
+          
+    - name: hello to username
+      run: echo " hello $user" 
