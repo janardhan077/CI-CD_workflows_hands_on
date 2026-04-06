@@ -1,0 +1,27 @@
+name: CICD
+on :
+  workflow_dispatch:
+
+jobs:
+       
+  code:
+    runs-on: Ubuntu-latest
+    steps: 
+      - name: code checkout
+        run: echo" code clone from github"
+  build:
+    runs-on: Ubuntu-latest
+    steps:
+    - name: build images 
+      run : echo" the images is built "
+  test:
+    runs-on : Ubuntu-latest
+    steps:
+    - name: testing the container
+      run : echo"testing the container "
+  deploy:
+        runs-on: Ubuntu-latest
+        steps:
+        - name: deploying
+          run: echo "deployed in ece mechine "
+  
