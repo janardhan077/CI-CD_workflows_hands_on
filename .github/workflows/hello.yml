@@ -10,4 +10,4 @@ jobs:
       run: echo "hello jana "
           
     - name: hello to username
-      run: echo " hello $user" 
+      run: echo " hello " 
