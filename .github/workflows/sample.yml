@@ -14,3 +14,9 @@ jobs:
 
       - name: hello to user
         run: echo "hello $USER"
+      - name: cureent date and time 
+        run : echo " $(date)"
+      - name : the user os 
+        run: cat /etc/os-release
+      - name: the files in repo 
+        run : ls
