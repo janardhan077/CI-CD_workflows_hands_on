@@ -19,4 +19,4 @@ jobs:
       - name : the user os 
         run: cat /etc/os-release
       - name: the files in repo 
-        run : ls
+        run : ls -f 
