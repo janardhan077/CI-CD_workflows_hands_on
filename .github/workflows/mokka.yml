@@ -1,0 +1,11 @@
+name : sam 
+on: push
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    steps:
+      - name: sample works flow hands on 
+        run: echo " hello bhaiya "
+      - name: check the versions 
+        run: echo "$(python --version
+    
