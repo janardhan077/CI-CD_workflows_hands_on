@@ -8,4 +8,9 @@ jobs:
         run: echo " hello bhaiya "
       - name: check the versions 
         run: echo "$(python --version)"
-    
+      - name: Check installed tools
+        run: |
+          docker --version
+          python3 --version
+          node --version
+          git --version
