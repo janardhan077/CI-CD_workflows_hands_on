@@ -7,5 +7,5 @@ jobs:
       - name: sample works flow hands on 
         run: echo " hello bhaiya "
       - name: check the versions 
-        run: echo "$(python --version
+        run: echo "$(python --version)"
     
