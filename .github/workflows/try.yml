@@ -11,6 +11,7 @@ jobs:
     - name: hello to the user 
       run: echo "hi $USER "
   code:
+    needs: greet
     runs-on: ubuntu-latest
     steps:
       - name: build the code 
