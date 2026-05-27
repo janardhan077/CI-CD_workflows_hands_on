@@ -10,4 +10,32 @@ jobs:
 
     - name: hello to the user 
       run: echo "hi $USER "
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build the code 
+        run: |
+              sudo apt get update 
+              sudo apt install docker.io -y
+              docker --version 
+
+  build:
+        needs: [ code ]
+        runs-on: ubuntu-latest
+        steps:
+          - name: create docker images 
+            run: |
+                  docker pull nginx 
+                  docker images 
+
+  test:
+       needs: build
+       runs-on: ubuntu-latest
+       steps:
+         - name: sample
+           run: echo "done "
+         
+      
+  
+        
    
