@@ -1,4 +1,4 @@
-name: hello
+name: try
 on:
   workflow_dispatch:
 jobs:
