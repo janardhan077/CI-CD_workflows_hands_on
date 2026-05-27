@@ -16,7 +16,6 @@ jobs:
       - name: build the code 
         run: |
               sudo apt-get update 
-              sudo apt install docker.io -y
               docker --version 
 
   build:
