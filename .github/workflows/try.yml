@@ -1,0 +1,13 @@
+name: hello
+on:
+  workflow_dispatch:
+jobs:
+  greet:
+    runs-on: ubutu-latest
+    steps:
+    - name: say hello to me 
+      run: echo "hello"
+
+    - name: hello to the user 
+      run: echo "hi $user "
+   
