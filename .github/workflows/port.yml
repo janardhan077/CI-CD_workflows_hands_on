@@ -1,11 +1,11 @@
 name: portfoilo 
 on:
     push:
-          branches:[main]
-permission:
-  pages: write
-  id-token: write 
-  contents: read       
+        branches: [main]
+            permission:
+                pages: write
+                id-token: write 
+                contents: read       
           
 jobs:
   Deploying:
