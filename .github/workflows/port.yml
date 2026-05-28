@@ -1,18 +1,16 @@
-name: portfoilo 
+name: portfoilo  
 on:
-    push:
-        branches: [main]
-            permission:
-                pages: write
-                id-token: write 
-                contents: read       
-          
+    workflow_dispatch: 
+permission: 
+    pages: write
+    id-token: write 
+    contents: read           
 jobs:
   Deploying:
   runs-on: ubuntu-latest
   environment:
-   name: github-pages
-   url: ${{ steps.deployment.outputs.pages_url}}
+      name: github-pages
+      url: ${{ steps.deployment.outputs.pages_url}}
 steps:
 # get the access to your portifolio
 
