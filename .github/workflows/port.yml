@@ -1,0 +1,33 @@
+name: portfoilo 
+on:
+    push:
+          branches:[main]
+permission:
+  pages: write
+  id-token: write 
+  contents: read       
+          
+jobs:
+  Deploying:
+  runs-on: ubuntu-latest
+  environment:
+   name: github-pages
+   url: ${{ steps.deployment.outputs.pages_url}}
+steps:
+# get the access to your portifolio
+
+      - name: checking out the code 
+        uses: actions/checkout@v4 
+       # set up github pages 
+
+      - name: setup github pages 
+        uses: actions/configure-pages@v4
+
+        #stastic file 
+      - name: upload static files 
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: "." 
+
+      - name: deploying the pages 
+        uses: actions/deploy-pages@v4   
