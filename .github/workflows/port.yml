@@ -1,7 +1,7 @@
-name: portfoilo  
+name: janar
 on:
     workflow_dispatch: 
-permission: 
+ permission: 
     pages: write
     id-token: write 
     contents: read           
