@@ -1,7 +1,7 @@
 name: Matrix Python Build
 
 on:
-  push:
+  p
 
 jobs:
   test:
