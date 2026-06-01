@@ -1,12 +1,17 @@
-name: hello
-on: 
-  workflow_dispatch: 
+name : hello
+on:
+   push:
+        branches:[main]
+
 jobs:
-  greet:
-    runs-on: ubuntu-latest
-    steps:
-    - name: say hello to me 
-      run: echo "hello jana "
-          
-    - name: hello to username
-      run: echo " hello " 
+  greet 
+runs-on: ubuntu-latest
+steps:
+  - name: to geert the users 
+    run: echo "hello welcome to my repo  "
+
+  - name: code check out the code using the actions 
+    uses: actions/checkout@v4
+
+  - name: hello from the github actions 
+    runs: echo " hello $USER from the github actions "  
