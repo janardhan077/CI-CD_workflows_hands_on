@@ -1,8 +1,7 @@
 name: Matrix Python Build
 
 on:
-  p
-
+  workflow_dispatch: 
 jobs:
   test:
     strategy:
