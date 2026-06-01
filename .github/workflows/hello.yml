@@ -1,17 +1,20 @@
-name : hello
+name: hello
+
 on:
-   push:
-        branches:[main]
+  push:
+    branches:
+      - main
 
 jobs:
-  greet 
-runs-on: ubuntu-latest
-steps:
-  - name: to geert the users 
-    run: echo "hello welcome to my repo  "
+  greet:
+    runs-on: ubuntu-latest
 
-  - name: code check out the code using the actions 
-    uses: actions/checkout@v4
+    steps:
+      - name: to greet the users
+        run: echo "hello welcome to my repo"
 
-  - name: hello from the github actions 
-    runs: echo " hello $USER from the github actions "  
+      - name: checkout the code using actions
+        uses: actions/checkout@v4
+
+      - name: hello from GitHub Actions
+        run: echo "hello $USER from GitHub Actions"
