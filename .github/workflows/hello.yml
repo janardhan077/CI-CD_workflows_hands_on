@@ -1,9 +1,17 @@
 name: hello
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: " hello enter your  wrok flow "   
+        default: 'dev'
+        required: true 
+        type: choice 
+        options :
+          - dev
+          - pod
+          - staging
 
 jobs:
   greet:
