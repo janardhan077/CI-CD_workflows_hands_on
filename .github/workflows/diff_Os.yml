@@ -1,0 +1,22 @@
+name: os
+on:
+  push:
+    branches: [main]
+jobs:
+  sample:
+    strategy:
+      matrix:
+        os: 
+        - ubuntu-latest
+        -   windows-latest
+        - macos-latest  
+    runs-on: ${{matrix.os}}
+    steps:
+      - name: the os name 
+        run: echo "$uname"
+      - name: The runner's hostname 
+        run : echo "$hostname "
+      - name : The current user running the jobs
+        run :  echo "$whoami"
+
+
