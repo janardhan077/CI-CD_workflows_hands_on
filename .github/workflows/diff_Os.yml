@@ -1,7 +1,6 @@
 name: os
 on:
-  push:
-    branches: [main]
+  workflow_dispatch: 
 jobs:
   sample:
     strategy:
