@@ -1,0 +1,24 @@
+name: jobsss
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+
+    outputs:
+      today_date: ${{ steps.getdate.outputs.date }}
+
+    steps:
+      - name: Get date and time
+        id: getdate
+        run: echo "date=$(date)" >> $GITHUB_OUTPUT
+
+  sample2:
+    needs: sample
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Read and print output
+        run: echo "Date from Job1 = ${{ needs.sample.outputs.today_date }}"
