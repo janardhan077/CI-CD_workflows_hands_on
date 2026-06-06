@@ -1,8 +1,6 @@
 name: Artifact Demo
-
 on:
   workflow_dispatch
-
 jobs:
   gen-report:
     runs-on: ubuntu-latest
