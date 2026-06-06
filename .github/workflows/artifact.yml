@@ -23,7 +23,7 @@ jobs:
         - name: Download artifact
           uses: actions/download-artifact@v4
           with:
-            name: my-report
+            name: system report 
   
         - name: Show downloaded files
           run: ls -la
