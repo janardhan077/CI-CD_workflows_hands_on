@@ -1,0 +1,28 @@
+name: Conditions Demo
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  push-only-job:
+    # Runs only on push events
+    if: github.event_name == 'push'
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Always runs
+        run: echo "Workflow started"
+
+      - name: Run only on main branch
+        if: github.ref == 'refs/heads/main'
+        run: echo "This is the main branch"
+
+      - name: Intentional failure
+        continue-on-error: true
+        run: exit 1
+
+      - name: Runs after failed step
+        if: failure()
+        run: echo "A previous step failed"
