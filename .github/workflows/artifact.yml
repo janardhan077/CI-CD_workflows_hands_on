@@ -1,0 +1,19 @@
+name: Artifact Demo
+
+on:
+  workflow_dispatch
+
+jobs:
+  gen-report:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Generate system report
+      run: |
+        top -b -n 1 > report.txt
+
+    - name: upload the artifact 
+      uses: actions/upload-artifact@v4
+      with:
+          name: system report 
+          path : report .txt
+
