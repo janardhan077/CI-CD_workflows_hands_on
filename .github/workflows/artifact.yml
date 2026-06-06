@@ -16,17 +16,17 @@ jobs:
           path : report.txt
 
   consume:
-    needs: generate
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: my-report
-
-      - name: Show downloaded files
-        run: ls -la
-
-      - name: Print report contents
-        run: cat report.txt
+      needs: gen-report
+      runs-on: ubuntu-latest
+  
+      steps:
+        - name: Download artifact
+          uses: actions/download-artifact@v4
+          with:
+            name: my-report
+  
+        - name: Show downloaded files
+          run: ls -la
+  
+        - name: Print report contents
+          run: cat report.txt
