@@ -1,7 +1,8 @@
 name: Parallel Jobs Demo
 
 on:
-  push:
+  workflow_dispatch:
+    
 
 jobs:
   lint:
