@@ -1,0 +1,21 @@
+name: checkout
+
+on:
+  workflow_dispatch
+
+jobs:
+  code-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: echo "No dependencies required"
+
+      - name: Make script executable
+        run: chmod +x sample.sh
+
+      - name: Run script
+        run: ./sample.sh
