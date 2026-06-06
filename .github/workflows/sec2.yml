@@ -1,0 +1,13 @@
+name: sec2 
+on:
+  workflow_dispatch
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    env:
+      my_s: ${{secrets.MY_SECRET_MESSAGE}}
+    steps:
+    - name: use the var 
+      run: echo " Secret exists:$my_s "
+    
+
