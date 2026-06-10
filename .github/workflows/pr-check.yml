@@ -1,12 +1,9 @@
 name: PR
 
-on:
-  pull_request:
-    branches:
-      - main
-    types:
-      - opened
-      - synchronize
+on: 
+  workflow_dispatch:
+  
+
 
 jobs:
   pr-check:

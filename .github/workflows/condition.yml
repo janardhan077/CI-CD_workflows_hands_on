@@ -6,7 +6,7 @@ on:
 
 jobs:
   push-only-job:
-    # Runs only on push events
+    
     if: github.event_name == 'push'
 
     runs-on: ubuntu-latest

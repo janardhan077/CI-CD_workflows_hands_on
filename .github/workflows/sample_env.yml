@@ -1,7 +1,8 @@
 name: Environment Variables Demo
 
 on:
-  push:
+  workflow_dispatch:
+    
 
 # Workflow Level Variable
 env:
